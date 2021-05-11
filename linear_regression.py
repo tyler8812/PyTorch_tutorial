@@ -82,10 +82,8 @@ def linear_regression_by_handmade():
 def fit(num_epochs, model, loss_fn, opt, train_dl):
     # Repeat for given number of epochs
     for epoch in range(num_epochs):
-
         # Train with batches of data
         for xb, yb in train_dl:
-
             # 1. Generate predictions
             pred = model(xb)
 
@@ -174,9 +172,9 @@ def linear_regression_by_PyTorch():
     # Define optimizer
     opt = torch.optim.SGD(model.parameters(), lr=1e-5)
 
-    batch_size = 100
+    epoch = 100
 
-    fit(batch_size, model, loss_fn, opt, train_dl)
+    fit(epoch, model, loss_fn, opt, train_dl)
     print(model(inputs))
     print(loss_fn(model(inputs), targets))
     print(model(torch.tensor([[75, 63, 44.]])))
