@@ -155,3 +155,4 @@ if __name__ == "__main__":
     plt.show()
 
     torch.save(model.state_dict(), 'mnist-logistic.pth')
+    
