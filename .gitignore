@@ -1,1 +1,4 @@
 /env
+/data
+/cifar10.tgz
+/.vscode
